@@ -1,3 +1,24 @@
+/* roboto-700 - latin */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local(""), url("../fonts/roboto-v29-latin-700.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/roboto-v29-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* mulish-regular - latin */
+@font-face {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local(""), url("../fonts/mulish-v10-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/mulish-v10-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
 html {
   box-sizing: border-box;
 }
@@ -17,7 +38,7 @@ img {
 }
 
 body {
-  font-family: "Roboto", "Arial", sans-serif;
+  font-family: "Roboto", "Mulish", sans-serif;
   line-height: 1.5;
   font-size: 18px;
   color: #333;
@@ -34,7 +55,156 @@ ol {
 }
 
 .container {
-  max-width: 1280px;
-  padding: 0 20px;
+  max-width: 1488px;
   margin: 0 auto;
+}
+
+/* WRAP */
+
+.wrap {
+  padding-top: 107px;
+}
+
+.wrap__title {
+  width: 561px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Roboto";
+  text-align: center;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 85px;
+  letter-spacing: -1.25694px;
+  color: #001a49;
+  margin-bottom: 84px;
+}
+.wrap__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.wrap__item {
+  width: 689px;
+  background-color: #edebeb;
+  border-radius: 21px;
+  display: flex;
+  margin-right: 110px;
+  margin-bottom: 60px;
+  padding: 36px 0 24px 46px;
+}
+
+.wrap__item:nth-child(2) {
+  margin-right: 0;
+}
+.wrap__item:nth-child(4) {
+  margin-right: 0;
+}
+
+.wrap__item-img {
+  margin-right: 30px;
+}
+
+.wrap__item-title {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: #001a49;
+}
+.wrap__item-text {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #4f596a;
+}
+
+@media only screen and (max-width: 1487px) {
+  .wrap__list {
+    display: flex;
+    justify-content: center;
+
+    flex-direction: column;
+  }
+
+  .wrap__item {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .wrap__item:nth-child(2) {
+    margin-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .wrap__item:nth-child(4) {
+    margin-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .wrap__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .wrap__item {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media only screen and (max-width: 710px) {
+  .wrap__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .wrap__item {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 10px;
+  }
+
+  .wrap__title {
+    font-size: 25px;
+    width: 261px;
+  }
+}
+@media only screen and (max-width: 410px) {
+  .wrap__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .wrap__item {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 5px;
+  }
+
+  .wrap__title {
+    font-size: 15px;
+    width: 150px;
+  }
+
+  .wrap__item-img {
+    height: 40px;
+    width: 40px;
+  }
+
+  .wrap__item-title {
+    font-size: 14px;
+  }
+  .wrap__item-text {
+    font-size: 12px;
+  }
 }
